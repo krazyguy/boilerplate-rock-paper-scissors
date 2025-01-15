@@ -82,7 +82,7 @@ def player(prev_opponent_play, opponent_history=[], player_history=[]):
     ideal_response = {'R': 'P', 'P': 'S', 'S': 'R'}  # Counter the predicted move
 
     # Introduce randomness
-    if random.random() > 0.052:  # 80% of the time follow the ideal response
+    if random.random() > 0.052:  # introduce randomness
         response = ideal_response[predicted_opponent_move]
     else:
         response = random.choice(['R', 'P', 'S'])  # Random response occasionally
